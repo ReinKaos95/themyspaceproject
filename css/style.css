@@ -1,0 +1,347 @@
+*{
+  margin: auto;
+  padding: 0px;
+}
+body{
+  font-family: verdana,arial,sans-serif,helvetica;
+  font-size: 11px;
+  color: #000;
+}
+#wrap{
+  width: 800px;
+  margin: auto;
+  padding: 0;
+  background-color: #ffffff;
+  text-align: left;
+}
+#header{
+text-align: right;
+padding: 5px;
+background-color: #0572f9;
+
+}
+
+#header, #header a, #topnav a {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+#logo{
+  margin-top: 15px;
+}
+img {
+    border: 0;
+}
+.left {
+    float: left;
+}
+div{
+    display: block;
+}
+.right {
+    float: right;
+}
+
+#topnav {
+    background-color: #63a1e0;
+    text-align: center;
+    padding: 5px;
+}
+
+#main{
+  min-height: 710px;
+  margin: 12px;
+  position: relative;
+  background: url(https://web.archive.org/web/20061017181612im_/http://x.myspace.com/images/divider4.gif) repeat-y 460px 0;
+}
+#nav {
+    width: 450px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    position: absolute;
+}
+table {
+      display: table;
+    font: inherit;
+    font-size: 100%;
+    color: inherit;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    white-space: normal;
+    text-align: start;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+#splash_greybox {
+    clear: left;
+    background-color: #F2F5F7;
+    border: 1px solid #D0E4FD;
+    height: 55px;
+    width: 440px;
+}
+
+.section{
+    margin-bottom: 15px;
+    border: 0;
+}
+
+#contentWrap {
+    position: static;
+}
+
+#splash_login {
+    border: 1px solid #003399;
+    width: 300px;
+    clear: both;
+}
+
+#splash_login .heading {
+    background-color: #0572f9;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.section .heading {
+    padding: 5px;
+    color: #0572f9;
+    text-align: left;
+}
+.heading {
+    background-color: #6698CB;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#content {
+    width: 300px;
+    left: 474px;
+    top: 0;
+    margin: 0;
+    background: none;
+    position: relative;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-block-end: 1em;
+}
+
+
+#splash_music {
+    width: 440px;
+}
+#splash_music .heading {
+    background-color: #B5CCFB;
+    height: 14px;
+}
+
+.section .heading {
+    padding: 5px;
+    color: #000000;
+    text-align: left;
+}
+
+.left {
+    float: left;
+}
+
+
+table {
+    font: inherit;
+    font-size: 100%;
+    color: inherit;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td {
+
+    display: table-cell;
+}
+
+a:link, a:active, a:visited {
+    color: #039;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img {
+    border: 0;
+}
+
+#splash_login .row {
+    clear: both;
+}
+
+#splash_login .row label {
+    float: left;
+    width: 30%;
+    text-align: right;
+    margin: 2px 0;
+    margin-right: 2%;
+}
+
+#splash_login .row input {
+    float: right;
+    width: 50%;
+    text-align: left;
+    margin: 2px 0;
+    margin-right: 15%;
+}
+
+.clear{
+    clear: both;
+}
+
+.section .loginBtn {
+    color: #0572f9;
+    border-radius: 20px;
+    padding: 4px 8px;
+    transition: background-color .5s;
+    border-style: groove;
+
+}
+.section .signupBtn {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 4px 8px;
+    border-style: groove;
+}
+.section .loginBtn:hover{
+    background-color: #0572f9;
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+#splash_coolNewPeople{
+    text-align: center;
+}
+
+#splash_coolNewPeople {
+    border: 1px solid #FFCC99;
+    width: 300px;
+}
+
+#splash_coolNewPeople .heading {
+    background-color: #FFCC99;
+}
+
+.w120 {
+    width: 98px;
+}
+
+  #splash_featuredVideos {border:1px solid #903; width:298px; _width:300px}
+  #splash_featuredVideos .heading, #splash_featuredVideos .heading a {background-color:#903; height:14px; color:#fff}
+  #splash_featuredVideos .heading a {font-size:80%}
+  #splash_featuredVideos p {font-size:80%; width:135px; margin:10px 0}
+  #splash_featuredVideos .image, #splash_featuredVideos .text {width:135px}
+
+  #splash_getStarted .cols, #splash_getStarted .cols td {
+    border: 1px solid #003399;
+}
+
+#splash_getStarted {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.cols {
+    width: 100%;
+}
+
+table {
+    font: inherit;
+    font-size: 100%;
+    color: inherit;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+#splash_getStarted .cols td {
+    border: 1px solid #003399;
+    background-color: #B5CCFB;
+    width: 24%;
+    padding: 5px;
+    font-size: 90%;
+}
+
+splash_getStarted h4 {
+    color: #003399;
+    font-size: 110%;
+    margin: 0;
+    padding: 0;
+}
+
+#splash_getStarted span {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+#splash_getStarted span a {
+    font-weight: normal;
+}
+
+a:link, a:active, a:visited {
+    color: #039;
+}
+
+#footer {
+    background-color: #E5E5E5;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#copyRight {
+    color: #000000;
+    font-size: 90%;
+    font-family: Arial;
+}
