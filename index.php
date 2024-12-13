@@ -134,32 +134,32 @@
     <div id="splash_login" class="section">
       <h5 class="heading">Member Login/Sign Up</h5>
       <br>
-         <form action="" method="post" name="theForm" id="theForm">
-              <div class="row">
-                <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email" value>
-              </div>
-              <div class="row">
-                <label for="pswd">Password</label>
-                <input type="password" name="pswd" id="pswd">
-              </div>
+<form action="login_handler.php" method="post" name="theForm" id="theForm">
+          <div class="row">
+              <label for="email">E-Mail</label>
+              <input type="email" name="email" id="email" required>
+          </div>
+          <div class="row">
+              <label for="pswd">Password</label>
+              <input type="password" name="password" id="pswd" required>
+          </div>
               <br>
               <br>
               <br>
-              <div class="clear" style="margin-left: 100px; margin-bottom: 7px;">
-                <input type="checkbox" name="remember" value="remember" id="remember">
-                <label for="checkbox">Remember Me</label>
-                <br>
-              </div>
-              <div style="margin-left: 35%;">
-                <button type="submit" id="login" name="login" value="login" class="loginBtn">Login</button>
-                <button type="submit" id="signup" name="signup" value="signup" class="signupBtn"><a href="">Sign Up</a></button>
+          <div class="clear" style="margin-left: 100px; margin-bottom: 7px;">
+              <input type="checkbox" name="remember" value="remember" id="remember">
+              <label for="checkbox">Remember Me</label>
+              <br>
+          </div>
+          <div style="margin-left: 15%;">
+              <button type="submit" name="role" value="user" class="loginBtn">Login as User</button>
+              <button type="submit" name="role" value="admin" class="signupBtn">Login as Admin</button>
                 <br>
                 <br>
                 <a href="" class="right">Forgot your password</a>
                 <br>
-              </div>
-        </form>
+          </div>
+      </form>
     </div>
     <div id="splash_coolNewPeople" class="section">
       <h5 class="heading">New People</h5>
