@@ -1,43 +1,42 @@
 <?php 
 
-require_once 'Auth.php';
+require_once 'logic/auth.php';
+
 
 class AdminController
 {
-	
-	function __construct()
-	{
-		$this->auth = new Auth();
-	}
+  private $auth;
+  function __construct($pdo)
+  {
+    $this->auth = new Auth($pdo);
+  }
 
   public function login($email, $password)
   {
     $user = $this->auth->authenticate($email, $password);
 
-    if ($user) {
-      if (['role'] === 'user') {
-        $_SESSION['user'] = 'user';
-        header('Location: admin.php')
-      }
+    if ($user && $user['role'] === 'admin') {
+      session_start();
+      $_SESSION['admin'] = $user;
+      header('Location: ../views/admin/AdminBoard.php');
     } else {
-      echo "Usted no posee los permisos para entrar";
-    } else {
-      echo "Identificacion invalida";
+      header('Location: ../Views/error.php?msg=Credenciales inválidas o rol incorrecto');
     }
-  }
 
+  }
     public function manageUsers() {
         // Ejemplo de función para gestionar usuarios
         echo "Aquí puedes gestionar usuarios.";
     }
 
-  public function logout()
+    public function logout()
   {
     session_start();
     session_unset();
     session_destroy();
-    header('Location: login.php')
+    header('Location: ../views/index.php');
   }
+
 }
 
 ?>

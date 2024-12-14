@@ -1,14 +1,14 @@
 <?php 
-
+require_once 'logic/auth.php';
 
 class UserController
 {
   private $auth;
 
 
-  function __construct()
+  function __construct($pdo)
   {
-    $this->auth = new Auth()
+    $this->auth = new Auth($pdo);
   }
 
 
@@ -16,25 +16,22 @@ class UserController
   {
     $user = $this->auth->authenticate($email, $password);
 
-    if ($user) {
-      if (['role'] === 'user') {
-        $_SESSION['user'] = 'user';
-        header('Location: dashboard.php')
-      }
-    } else {
-      echo "Usted no posee los permisos para entrar";
-    } else {
-      echo "Identificacion invalida";
+    if ($user && $user['role'] === 'user') {
+      session_start();
+      $_SESSION['user'] = $user;
+      header('Location: views/user/dashboard.php');
+    } else{
+      header('Location: ../views/error.php?msg=Credenciales inválidas o rol incorrecto');
     }
   }
-
-  public function logout()
+    public function logout()
   {
     session_start();
     session_unset();
     session_destroy();
-    header('Location: login.php')
+    header('Location: login.php');
   }
 }
+
 
  ?>

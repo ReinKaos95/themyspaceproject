@@ -1,19 +1,18 @@
 <?php 
 
-
+	//Conexion de base de datos sin uso de POO
 
 	$host="localhost";
-	$dbname="msproject";
-	$port="5432";
-	$user="postgres";
-	$password="123456";
+	$dbname="myspace";
+	$port="3306";
+	$user="root";
+	$password="";
 
 	try {
-	$conn = pg_connect("host=$host port= $port dbname=$dbname user=$user password=$password");
-	return $conn;
-	} catch (Exception $e) {
-	echo $e->getMessage();
+	$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch (PDOException $e) {
+	die("Error de conexion: " . $e->getMessage());
 	}
-
 
  ?>

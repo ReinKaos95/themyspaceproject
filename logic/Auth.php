@@ -1,23 +1,20 @@
 <?php 
 
-/**
- * 
- */
+require_once 'db.php';
 class Auth
 {
- 
-  private $users = [
-    ['email' => 'walter@hotmail.com', 'password' => '1234', 'role' => 'user'],
-    ['email' => 'carlos@hotmail.com', 'password' => '1234', 'role' => 'admin']
-];
+    private $pdo;
 
-    public function authenticate($email, $password) {
-        foreach ($this->users as $user) {
-            if ($user['email'] === $email && $user['password'] === $password) {
-                return $user;
-            }
-        }
-        return null;
+    function __construct($pdo)
+    {
+        $this->pdo = $pdo;
+    }
+
+    public function authenticate($email, $password)
+    {
+        $stmt = $this->pdo->prepare("select * from users where email = :email and password = :password");
+        $stmt->execute(['email' => $email, 'password' => $password]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 }
