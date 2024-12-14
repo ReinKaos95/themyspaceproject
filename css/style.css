@@ -6,6 +6,7 @@ body{
   font-family: verdana,arial,sans-serif,helvetica;
   font-size: 11px;
   color: #000;
+  background-color: #E5E5E5
 }
 #wrap{
   width: 800px;
@@ -344,4 +345,9 @@ a:link, a:active, a:visited {
     color: #000000;
     font-size: 90%;
     font-family: Arial;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }

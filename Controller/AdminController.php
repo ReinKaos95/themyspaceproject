@@ -3,7 +3,7 @@
 require_once 'logic/auth.php';
 
 
-class AdminController
+class AdminController extends BaseController
 {
   private $auth;
   function __construct($pdo)
@@ -20,7 +20,7 @@ class AdminController
       $_SESSION['admin'] = $user;
       header('Location: ../views/admin/AdminBoard.php');
     } else {
-      header('Location: ../Views/error.php?msg=Credenciales inválidas o rol incorrecto');
+      header('Location: views/error.php?msg=Credenciales inválidas o rol incorrecto');
     }
 
   }
@@ -28,14 +28,6 @@ class AdminController
         // Ejemplo de función para gestionar usuarios
         echo "Aquí puedes gestionar usuarios.";
     }
-
-    public function logout()
-  {
-    session_start();
-    session_unset();
-    session_destroy();
-    header('Location: ../views/index.php');
-  }
 
 }
 

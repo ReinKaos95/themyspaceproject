@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Generar un token único
+}
+?>
     <div id="splash_login" class="section">
       <h5 class="heading">Member Login/Sign Up</h5>
       <br>

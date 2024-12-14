@@ -1,7 +1,7 @@
 <?php 
 require_once 'logic/auth.php';
 
-class UserController
+class UserController extends BaseController
 {
   private $auth;
 
@@ -21,16 +21,10 @@ class UserController
       $_SESSION['user'] = $user;
       header('Location: views/user/dashboard.php');
     } else{
-      header('Location: ../views/error.php?msg=Credenciales inválidas o rol incorrecto');
+      header('Location: views/error.php?msg=Credenciales inválidas o rol incorrecto');
     }
   }
-    public function logout()
-  {
-    session_start();
-    session_unset();
-    session_destroy();
-    header('Location: login.php');
-  }
+
 }
 
 
